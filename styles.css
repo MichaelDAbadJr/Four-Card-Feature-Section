@@ -41,17 +41,19 @@ html {
 
 body {
   margin: 0;
+  padding-block-end: 5rem;
 }
 
 h1,
 h2,
 h3 {
   color: var(--clr-neutral-900);
-  line-height: 1.1;
+  line-height: 1.2;
 }
 
 .wrapper {
-  max-width: 1100px;
+  padding-inline: 2rem;
+  max-width: 1280px;
   margin-inline: auto;
 }
 
@@ -60,25 +62,91 @@ h3 {
 }
 
 header {
-    text-align: center;
-    margin-block: 6rem;
+  text-align: center;
+  margin-block: 6rem;
 }
 
+h1 {
+  font-weight: var(--fw-light);
+  font-size: var(--fs-900);
+}
+
+h1 span {
+  font-weight: var(--fw-bold);
+}
+
+header > p {
+  font-size: var(--fs-500);
+}
+
+/* flex solution */
+/* Make sure to ask questions on this */
+/* .layout-grid {
+  display: flex;
+  gap: 2rem;
+  --gap: 2rem;
+  gap: var(--gap);
+} */
+
+/* @media (max-width: 800px) {
+  .layout-grid {
+    flex-direction: column;
+  }
+} */
+/* grid solution */
 .layout-grid {
-    --gap: 2rem;
-    display: flex;
-    gap: var(--gap);
+  display: grid;
+  --gap: 2rem;
+  gap: var(--gap);
+}
+
+@media (min-width: 800px) {
+  .layout-grid {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
 }
 
 .layout-grid > * {
-    flex: 1;
+  flex: 1;
 }
 
 .col {
-    border: 3px solid dodgerblue;
+  /* display: grid; */
+  /* align-content: center; */
+  display: flex; /*comment this out if using grid to get same effect */
+  flex-direction: column; /*comment this out if using grid to get same effect */
+  justify-content: center; /*comment this out if using grid to get same effect */
+  gap: var(--gap);
 }
 
-.car {
-    padding: 2rem;
-    background: #efefef;
+.card {
+  --br: 0.325rem;
+  padding: 2rem;
+  border-top: var(--br) solid;
+  border-radius: var(--br);
+  box-shadow: 0 1rem 1.5rem -0.5rem rgba(0 50 100 / 0.15);
+}
+
+.card__title {
+  font-size: var(--fs-600);
+  margin: 0;
+}
+
+.card__img {
+  display: block;
+  margin-left: auto;
+  margin-top: 2rem;
+}
+
+.border-teal {
+  border-color: var(--clr-teal);
+}
+.border-red {
+  border-color: var(--clr-red);
+}
+.border-yellow {
+  border-color: var(--clr-yellow);
+}
+.border-blue {
+  border-color: var(--clr-blue);
 }
