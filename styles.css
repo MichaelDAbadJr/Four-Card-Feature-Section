@@ -96,7 +96,7 @@ header > p {
 /* grid solution */
 .layout-grid {
   display: grid;
-  --gap: 2rem;
+  --gap: 2.5rem;
   gap: var(--gap);
 }
 
