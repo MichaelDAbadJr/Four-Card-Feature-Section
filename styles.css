@@ -111,9 +111,9 @@ header > p {
 }
 
 .col {
-  /* display: grid; */
+  /* display: grid; */ 
   /* align-content: center; */
-  display: flex; /*comment this out if using grid to get same effect */
+  display: flex; /*comment this out if using grid to get same effect. */
   flex-direction: column; /*comment this out if using grid to get same effect */
   justify-content: center; /*comment this out if using grid to get same effect */
   gap: var(--gap);
